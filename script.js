@@ -1,4 +1,4 @@
-fetch('http://localhost:3000/weather')
+fetch('https://weatherapp-part4-backend-khaki.vercel.app/weather')
 	.then(response => response.json())
 	.then(data => {
 		if (data.weather) {
@@ -24,7 +24,7 @@ fetch('http://localhost:3000/weather')
 function updateDeleteCityEventListener() {
 	for (let i = 0; i < document.querySelectorAll('.deleteCity').length; i++) {
 		document.querySelectorAll('.deleteCity')[i].addEventListener('click', function () {
-			fetch(`http://localhost:3000/weather/${this.id}`, { method: 'DELETE' })
+			fetch(`https://weatherapp-part4-backend-khaki.vercel.app/weather/${this.id}`, { method: 'DELETE' })
 				.then(response => response.json())
 				.then(data => {
 					if (data.result) {

@@ -7,7 +7,7 @@ document.querySelector("#register").addEventListener("click", function () {
     email: newEmail,
     password: mdp,
   };
-  fetch('http://localhost:3000/users/signup', {
+  fetch('https://weatherapp-part4-backend-khaki.vercel.app/users/signup', {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify(newUser),
@@ -27,7 +27,7 @@ document.querySelector("#connection").addEventListener("click", function () {
     email: email,
     password: mdp,
   };
-  fetch("http://localhost:3000/users/signin", {
+  fetch("https://weatherapp-part4-backend-khaki.vercel.app/users/signin", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(user),
